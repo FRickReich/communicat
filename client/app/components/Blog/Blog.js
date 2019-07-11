@@ -58,12 +58,12 @@ class Blog extends Component
             <div>
                 <div>
                 { posts.map((post, i) => (
-                    <li key={i}>
+                    <li key={ i }>
                         <span>{ post._id }</span>
                     </li>
                 )) }
                 </div>
-                <button onClick={() => this.AddnewBlogPost()}>Add new</button>
+                <button onClick={ () => this.AddnewBlogPost() }>Add new</button>
             </div>
         );
     }
