@@ -33,22 +33,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-/*
-
-<header>
-                <nav>
-                    <ul>
-                        <li className="active">
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/blog">Blog</Link>
-                        </li>
-                        <li className="right">
-                            <Link to="/admin">Admin</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            */
