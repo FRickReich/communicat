@@ -4,8 +4,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 
-class Header extends Component {
-    constructor(props) {
+class Header extends Component
+{
+    constructor(props) 
+    {
         super(props);
     }
 
@@ -33,22 +35,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-/*
-
-<header>
-                <nav>
-                    <ul>
-                        <li className="active">
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/blog">Blog</Link>
-                        </li>
-                        <li className="right">
-                            <Link to="/admin">Admin</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            */
