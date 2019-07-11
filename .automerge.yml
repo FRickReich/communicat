@@ -10,5 +10,5 @@ merge:
   method: squash
   # status checks required in addition to the ones defined in GitHub Branch Protection Rules
   required_statuses:
-    - "hound"
+    - "Hound — No violations found. Woof!"
   delete_after_merge: true
