@@ -10,7 +10,7 @@ class Admin extends Component
 
         this.state =
         {
-            counters: [  ]
+            counters: []
         };
     }
   
