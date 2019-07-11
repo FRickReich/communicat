@@ -59,7 +59,9 @@ class Blog extends Component
                 <div>
                 { posts.map((post, i) => (
                     <li key={i}>
-                        <span>{post._id} </span>
+                        <span>
+                            { post._id }
+                        </span>
                     </li>
                 )) }
                 </div>
