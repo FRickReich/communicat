@@ -11,7 +11,8 @@ class Header extends Component
         super(props);
     }
 
-    render() {
+    render()
+    {
         return (
             <>
                 <Navbar bg="light">
