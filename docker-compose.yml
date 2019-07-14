@@ -18,5 +18,10 @@ services:
     networks:
       - all
 
+  mongoexpress: 
+    image: mongo-express:latest
+    networks:
+      - all
+
 networks:
   all:
