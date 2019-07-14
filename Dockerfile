@@ -1,4 +1,4 @@
-FROM node:6.1.0
+FROM node:8-slim
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -6,4 +6,6 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install
 
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
+
+EXPOSE 8080

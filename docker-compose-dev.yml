@@ -6,24 +6,34 @@ services:
     volumes:
       - ./:/usr/src/app
     working_dir: /usr/src/app
-    command: sh -c 'npm install; npm install -g nodemon ; npm rebuild ; node server'
+    command: sh -c 'npm install; npm install -g nodemon ; node app.js'
     ports:
       - "80:3000"
     depends_on:
       - mongo
-    networks:
+    networks: 
       - all
     environment:
-      MONGODB_URI: "mongodb://mongo:27017/blog"
+      MONGODB_URI: "mongodb://mongo:27017/communicat"
 
   mongo:
-    image: mongo:3
+    image: mongo
     command: mongod --smallfiles
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
     networks:
       - all
-  
-  mongoexpress: 
-    image: mongo-express:latest
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
     networks:
       - all
 
