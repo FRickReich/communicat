@@ -15,17 +15,6 @@ services:
         - MONGO_INITDB_ROOT_PASSWORD: "test"
       dependencies:
         - "../backend/mongodb"
-    mongo:
-      image: 'mongo-express'
-      instances: 1
-      mem: 256
-      port: 8081
-      env:
-        - ME_CONFIG_MONGODB_SERVER: "mongodb.backend.communicat"
-        - ME_CONFIG_MONGODB_ADMINUSERNAME: "admin"
-        - ME_CONFIG_MONGODB_ADMINPASSWORD: "test"
-        - ME_CONFIG_BASICAUTH_USERNAME: "admin"
-        - ME_CONFIG_BASICAUTH_PASSWORD: "test"
   backend:
     mongodb:
       image: "mongo"

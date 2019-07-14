@@ -2,6 +2,11 @@
 
 import React, { Component } from 'react';
 
+
+
+
+
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -10,11 +15,12 @@ class Home extends Component {
       counters: []
     };
   }
-  
+
   render() {
+
     return (
       <>
-            s
+        s
       </>
     );
   }

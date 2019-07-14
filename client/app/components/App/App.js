@@ -4,7 +4,7 @@ import Home from './../Home/Home'
 
 const App = ({ children }) => (
     <div>
-        X
+        <Home />
     </div>
 );
 
