@@ -2,7 +2,7 @@ version: '2'
 services:
 
   web:
-    image: frickreich/communicat:0.1
+    image: frickreich/communicat:latest
     ports:
       - "80:3000"
     depends_on:
@@ -22,6 +22,11 @@ services:
     image: mongo-express:latest
     networks:
       - all
+
+  owncloud:
+    image: "owncloud:10.0.3"
+    networks:
+      - all  
 
 networks:
   all:
