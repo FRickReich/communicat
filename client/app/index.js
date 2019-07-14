@@ -13,9 +13,6 @@ import NotFound from './components/App/NotFound';
 
 import Home from './components/Home/Home';
 
-import Blog from './components/Blog/Blog';
-import Admin from './components/Admin/Admin';
-
 
 import './styles/styles.scss';
 
@@ -24,8 +21,6 @@ render((
     <App>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route path="/blog" component={Blog}/>
-        <Route path="/admin" component={Admin}/>
         
         <Route component={NotFound}/>
       </Switch>
