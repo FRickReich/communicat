@@ -1,0 +1,24 @@
+version: "v1"
+project: "communicat"
+services:
+  frontend:
+    node:
+      image: "frickreich/communicat:0.1"
+      instances: 1
+      mem: 512
+      domain: communicat.sloppy.zone
+      port: 3000
+      env:
+        - MONGODB_URI: "mongodb://mongodb.backend.frickreich/starter"
+        - ROOT_URL: "https://communicat.sloppy.zone"
+      dependencies:
+        - "../backend/mongodb"
+  backend:
+    mongodb:
+      image: "mongo"
+      cmd: "mongod --smallfiles"
+      instances: 1
+      mem: 512
+      volumes:
+        - path: "/data/db"
+        - path: "/data/configdb"
