@@ -9,7 +9,7 @@ services:
       domain: communicat.sloppy.zone
       port: 3000
       env:
-        - MONGODB_URI: "mongodb://mongodb.backend.frickreich/starter"
+        - MONGODB_URI: "mongodb://mongodb.backend.communicat"
         - ROOT_URL: "https://communicat.sloppy.zone"
         - MONGO_INITDB_ROOT_USERNAME: "admin"
         - MONGO_INITDB_ROOT_PASSWORD: "test"
