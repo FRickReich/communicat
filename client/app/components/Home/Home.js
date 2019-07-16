@@ -92,9 +92,9 @@ class Home extends Component {
           { this.state.counters.map((counter, i) => (
             <li key={i}>
               <span>{counter.count} </span>
-              <button onClick={() => this.incrementCounter(i)}>+</button>
-              <button onClick={() => this.decrementCounter(i)}>-</button>
-              <button onClick={() => this.deleteCounter(i)}>x</button>
+              <button onClick={() => this.incrementCounter(i)}>(+)</button>
+              <button onClick={() => this.decrementCounter(i)}>(-)</button>
+              <button onClick={() => this.deleteCounter(i)}>(x)</button>
             </li>
           )) }
         </ul>
