@@ -10,7 +10,7 @@ services:
     networks:
       - all
     environment:
-      MONGODB_URI: "mongodb://mongo:27017/communicat"
+      - MONGODB_URI=mongodb://mongo:27017/cpmmunicat 
 
   mongo:
     image: mongo:4.0
