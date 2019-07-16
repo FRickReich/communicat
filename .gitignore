@@ -1,7 +1,7 @@
 /_legacy
 /node_modules
 /db
-/Dist
+/dist
 
 *.DS_Store
 *.env

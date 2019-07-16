@@ -19,7 +19,7 @@
             }
           ],
           "env": {
-            "MONGODB_URI": "mongodb://mongodb.frickreich.communicat/communicat",
+            "MONGODB_URI": "mongodb://mongodb.backend.communicat/communicat",
             "MONGO_INITDB_ROOT_PASSWORD": "test",
             "MONGO_INITDB_ROOT_USERNAME": "admin",
             "ROOT_URL": "https://communicat.sloppy.zone"
