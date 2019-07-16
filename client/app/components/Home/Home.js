@@ -86,7 +86,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <p>Counters...:</p>
+        <p>Counters...!</p>
 
         <ul>
           { this.state.counters.map((counter, i) => (
