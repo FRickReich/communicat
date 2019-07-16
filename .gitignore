@@ -1,5 +1,6 @@
 /_legacy
 /node_modules
+/db
 
 *.DS_Store
 *.env
