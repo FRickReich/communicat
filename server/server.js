@@ -6,12 +6,14 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+const session = require('express-session')
+const cookieParser = require('cookie-parser');
 
 const config = require('../config/config');
 const webpackConfig = require('../webpack.config');
 
 const isDev = process.env.NODE_ENV !== 'production';
-const port  = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 
 // Configuration
@@ -22,13 +24,23 @@ mongoose.connect(isDev ? config.db_dev : config.db);
 mongoose.Promise = global.Promise;
 
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cookieParser());
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+
 
 // API routes
 require('./routes')(app);
 
-if (isDev) {
+if (isDev)
+{
   const compiler = webpack(webpackConfig);
 
   app.use(historyApiFallback({
@@ -50,16 +62,20 @@ if (isDev) {
 
   app.use(webpackHotMiddleware(compiler));
   app.use(express.static(path.resolve(__dirname, '../dist')));
-} else {
+} else
+{
   app.use(express.static(path.resolve(__dirname, '../dist')));
-  app.get('*', function (req, res) {
+  app.get('*', function (req, res)
+  {
     res.sendFile(path.resolve(__dirname, '../dist/index.html'));
     res.end();
   });
 }
 
-app.listen(port, '0.0.0.0', (err) => {
-  if (err) {
+app.listen(port, '0.0.0.0', (err) =>
+{
+  if (err)
+  {
     console.log(err);
   }
 

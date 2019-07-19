@@ -11,10 +11,13 @@ services:
       - "80:3000"
     depends_on:
       - mongo
-    networks: 
+    networks:
       - all
     environment:
       MONGODB_URI: "mongodb://mongo:27017/communicat"
+
+  redis:
+    image: "redis:alpine"
 
   mongo:
     image: mongo:4.0

@@ -10,7 +10,10 @@ services:
     networks:
       - all
     environment:
-      - MONGODB_URI=mongodb://mongo:27017/cpmmunicat 
+      - MONGODB_URI=mongodb://mongo:27017/cpmmunicat
+
+  redis:
+    image: "redis:alpine"
 
   mongo:
     image: mongo:4.0

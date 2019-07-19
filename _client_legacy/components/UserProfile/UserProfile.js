@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import 'regenerator-runtime/runtime'
+'use strict';
 
-class App extends Component
+import React, {Component} from 'react';
+
+class UserProfile extends Component
 {
     constructor(props)
     {
@@ -15,11 +16,11 @@ class App extends Component
     render()
     {
         return (
-            <>
-                { this.props.children }
-            </>
+            <div>
+                <p>Profile</p>
+            </div>
         );
     }
 }
 
-export default App;
+export default UserProfile;

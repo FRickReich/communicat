@@ -8,11 +8,11 @@ import {
   Switch
 } from 'react-router-dom'
 
+import * as serviceWorker from "./serviceWorker";
+
 import App from './components/App/App';
 import NotFound from './components/App/NotFound';
-
 import Home from './components/Home/Home';
-
 
 import './styles/styles.css';
 
@@ -21,9 +21,10 @@ render((
     <App>
       <Switch>
         <Route exact path="/" component={Home}/>
-        
         <Route component={NotFound}/>
       </Switch>
     </App>
   </Router>
 ), document.getElementById('app'));
+
+serviceWorker.unregister();
