@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import 'regenerator-runtime/runtime'
 
+import NavBar from "./../NavBar/NavBar"
+
 class App extends Component
 {
     constructor(props)
@@ -16,6 +18,7 @@ class App extends Component
     {
         return (
             <>
+                <NavBar />
                 { this.props.children }
             </>
         );
